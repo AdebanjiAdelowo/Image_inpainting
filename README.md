@@ -16,8 +16,8 @@ TV regularisation preserves sharp edges while smoothly interpolating across the 
 
 The TV minimisation is reformulated as a saddle-point problem and solved with the **Preconditioned Douglas-Rachford** algorithm from:
 
-> *Preconditioned Douglas-Rachford Splitting Algorithms for Convex-Concave Saddle-Point Problems*  
-> Kristian Bredies, Hongpeng Sun, [SFB Report 2014-002](https://imsc.uni-graz.at/mobis/publications/SFB-Report-2014-002_2.pdf)
+> *Preconditioned Douglas-Rachford Splitting Methods for Convex-Concave Saddle-Point Problems*  
+> Kristian Bredies, Hongpeng Sun, [SFB Report 2014-002](https://imsc.uni-graz.at/mobis/publications/SFB-Report-2014-002_2.pdf), June 2014
 
 Each iteration alternates between:
 1. A proximal step for the primal variable $u$, solved with **Symmetric Red-Black Gauss-Seidel**
