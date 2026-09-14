@@ -55,7 +55,7 @@ sym_red_black_gauss_seidel : vectorised checkerboard solver for (λI − μΔ)u 
 tv_inpainting     : main DR loop
 ```
 
-All operations are fully vectorised with NumPy: no Python loops over pixels.
+The seven algorithm functions above are fully vectorised with NumPy: no Python loops over pixels. (Two of the data-loading/setup cells elsewhere in the notebooks do use ordinary per-pixel Python loops; only the core algorithm listed above is loop-free.)
 
 ## Requirements
 
