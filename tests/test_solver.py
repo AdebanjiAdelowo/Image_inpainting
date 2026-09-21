@@ -204,3 +204,14 @@ def test_default_solver_is_step_size_consistent():
     f, known, lower = _strip_problem()
     energies = [tv_energy(pdr_inpaint(f, known, iters=1500, sigma=14, tau=st / 14).u) for st in (0.5, 1.0, 2.0)]
     assert max(energies) - min(energies) < 1e-6 * lower
+
+
+def test_documented_public_api_is_importable():
+    """The README quick start uses `from tvinpaint import pdr_inpaint`."""
+    import tvinpaint
+    from tvinpaint import PDRResult, pdr_inpaint as api
+
+    assert api is pdr_inpaint and tvinpaint.__all__ == ["pdr_inpaint", "PDRResult"]
+    f, known = _problem(7)
+    r = api(f, known, iters=3)
+    assert isinstance(r, PDRResult) and np.array_equal(r.u[known], f[known])
