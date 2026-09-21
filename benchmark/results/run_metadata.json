@@ -1,0 +1,95 @@
+{
+  "config": {
+    "sigma": 14,
+    "tau_rule": "1/sigma",
+    "n_sweeps": 3,
+    "iters": 200,
+    "converged_iters": 1500,
+    "init": "damaged image (hole = 255)",
+    "data_range": 255.0,
+    "area_frac": 0.1623,
+    "trace_iters": [
+      10,
+      25,
+      50,
+      100,
+      200,
+      300,
+      500,
+      750,
+      1000,
+      1500
+    ]
+  },
+  "masks": [
+    [
+      "canonical",
+      [
+        0
+      ]
+    ],
+    [
+      "dropout",
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    [
+      "scratch",
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    [
+      "blocks8",
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    [
+      "blocks16",
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    [
+      "blocks32",
+      [
+        0,
+        1,
+        2
+      ]
+    ],
+    [
+      "blocks64",
+      [
+        0,
+        1,
+        2
+      ]
+    ]
+  ],
+  "n_cases": 95,
+  "wall_time_s": 1552.4004180431366,
+  "workers": 4,
+  "load_average_at_end": [
+    8.3369140625,
+    11.61083984375,
+    11.67041015625
+  ],
+  "python": "3.12.2",
+  "numpy": "2.0.0",
+  "scipy": "1.13.1",
+  "skimage": "0.26.0",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "machine": "arm64",
+  "repo_head": "02e8be2919e7db60ae9e072bc5f71a8e23123875"
+}
